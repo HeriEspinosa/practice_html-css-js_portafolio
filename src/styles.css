@@ -108,7 +108,7 @@ img {
 .img__perfil__personal {
     position: absolute;
     height: 520px;
-    width: 390px;
+    width: 380px;
     margin: 0 auto;
     left: -55px;
     top: -53px
@@ -229,6 +229,8 @@ img {
 
 .servicios {
     flex-direction: column;
+    overflow: hidden;
+    padding: 1rem;
 }
 .servicio__servicios {
     flex-direction: column;
