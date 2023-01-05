@@ -54,6 +54,7 @@ img {
     background-color: var(--whiteGray);
 }
 
+
 .menu {
     width: 100vw;
     display: grid;
@@ -64,28 +65,27 @@ img {
     position: sticky;
     top: 20px;
 }
-
 .menu div:nth-child(1) {
     grid-column: 4/5;
     position: sticky;
     top: 20px;
     cursor: pointer;
 }
-
 .menu div:nth-child(1):hover {
     opacity: 0.8    ;
     transform: scale(1.1);
 }
+
 
 #decor__menu {
     margin: -30px -60px -60px -60px;
     margin-left: -250px;
     padding: -50px;
 }
-
 .decor__menu:hover {
     transform: rotate(10deg);
 }
+
 
 .perfil {
     flex-direction: column;
@@ -93,7 +93,6 @@ img {
     margin-top: -2.5rem;
     overflow: hidden;
 }
-
 .img__perfil {
     width: 80%;
     margin-bottom: 30px;
@@ -101,13 +100,11 @@ img {
     display: flex;
     position: relative;
 }
-
 .img__perfil__bg {
     display: block;
     margin: -30px;
     width: 380px;
 }
-
 .img__perfil__personal {
     position: absolute;
     height: 520px;
@@ -116,27 +113,25 @@ img {
     left: -55px;
     top: -53px
 }
-
 .img__perfil__personal:hover {
-    opacity: 0.8    ;
     transform: scale(1.01);
 }
+
 
 .presentacion__perfil {
     flex-direction: column;
 }
-
 .presentacion__perfil h4 {
     font-size: 1.6rem;
     text-shadow: -2px 1px 4px var(--lightGray);
     color: var(--nombre);
     margin-bottom: 8px;
 }
-
 .presentacion__perfil h2 {
     font-size: 2rem;
     font-weight: 600;
 }
+
 
 .redes__perfil div {
     
@@ -145,17 +140,16 @@ img {
     padding: 5px;
     margin: 10px;
 }
-
 .redes__perfil img {
     height: 50px;
     width: 50px;
     padding: 3px;    
 }
-
 .hr_redes {
     width: 300px;
     border: 1px medium gray
 }
+
 
 .contactame__btn {
     background-color: var(--nombre);
@@ -164,39 +158,61 @@ img {
     border-radius: 20px;
     cursor: pointer;
 }
-
 .contactame__btn a {
     color: var(--white);
     text-decoration: none;
     font-size: 25px;
 }
 
-.habilidades > p {
-    margin-bottom: 16px;
-}
 
+.habilidades > p {
+    margin-bottom: 36px;
+}
 .habilidades__all {
     flex-wrap: wrap;
     gap: 1rem;
 }
-
-.habilidades__all-child > section {
+.habilidades__all-child section > section {
     width: 150px;
     height: 90px;
-    margin-top: 20px;
+    margin-top: -1px;
     background-color: var(--white);
     color: var(--nombre);
     font-size: 2.5rem;
     font-weight: bold;
+    border-radius: 5px;
+    overflow: hidden;
 }
-
 .habilidades__all-child > p {
     text-align: center;
     font-weight: 600;
     font-size: 18px;
-    text-shadow: 1px 1px 2px var(--nombre);
+    text-shadow: 0px 1px 1px var(--nombre);
     padding: 5px;
 }
+.habilidades__all-child-hr {
+    border-top: 7px solid var(--lightBlue);
+    border-radius: 7px;
+}
+.hr1 {
+    width: 90%;
+}
+.hr2 {
+    width: 80%;
+}
+.hr3 {
+    width: 80%;
+}
+.hr4 {
+    width: 75%;
+}
+.hr5 {
+    width: 65%;
+}
+.hr6 {
+    width: 65%;
+}
+
 
 .acerca_de_mi {
     flex-direction: column;
@@ -204,31 +220,27 @@ img {
     padding: 1rem;
     font-size: 18px;
 }
-
 .acerca_de_mi article > p {
     margin-top: 10px;
     font-size: 22px;
     font-weight: 400;
 }
 
+
 .servicios {
     flex-direction: column;
 }
-
 .servicio__servicios {
     flex-direction: column;
-    gap: 1rem;
-    
+    gap: 1rem; 
 }
 .servicio__servicios > img {
     width: 150px;
     margin-top: 30px;
 }
-
 .servicio__servicios > h4 {
     font-size: 22px;
 }
-
 .servicio__servicios > p {
     text-align: center;
     font-size: 18px;
@@ -236,11 +248,11 @@ img {
     margin: -10px;
 }
 
+
 .portafolio {
     flex-direction: column;
     gap: 2rem;
 }
-
 .portafolio > section {
     height: 300px;
     width: 300px;
@@ -248,47 +260,43 @@ img {
     border-radius: 10px;
     overflow: hidden;
 }
-
 .portafolio section > img {
     width: 300px;
     height: 85%;
     padding-bottom: 12px;
 }
-
 .portafolio section > p {
     text-align: center;
     font-size: 20px;
     font-weight: 600;
 }
 
+
 .contacto {
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
 }
-
 .contacto section {
     flex-direction: column;
     text-align: center;
 }
-
 .contacto section > img {
     width: 200px;
     height: 200px;
 }
-
 .p__contacto {
     font-size: 25px;
     font-weight: bold;
     color: var(--nombre);
 }
-
 .p__contacto ~ p {
     font-size: 25px;
 }
 
+
 .email {
-    margin-bottom: 60px;
+    margin-bottom: 130px;
 }
 
 .footer {
