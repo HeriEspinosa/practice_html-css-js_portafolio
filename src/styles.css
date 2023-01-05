@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&family=Sevillana&display=swap');
 
 :root {
     --lightBlue: #34B0BE;
@@ -16,6 +16,10 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
+}
+
+.ff-sevillana {
+    font-family: 'Sevillana', cursive;
 }
 
 html {scroll-behavior: smooth;}
@@ -48,7 +52,6 @@ img {
     flex-direction: column;
     gap: 1rem;
     background-color: var(--whiteGray);
-    margin: 0  auto;
 }
 
 .menu {
@@ -88,6 +91,7 @@ img {
     flex-direction: column;
     gap: 1.5rem;
     margin-top: -2.5rem;
+    overflow: hidden;
 }
 
 .img__perfil {
@@ -129,7 +133,7 @@ img {
 }
 
 .presentacion__perfil h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
@@ -210,4 +214,33 @@ img {
 
 .servicio__servicios > p {
     text-align: center;
+    margin: -10px;
+}
+
+.contacto {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.p__contacto {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--nombre);
+}
+
+.p__contacto ~ p {
+    font-size: 25px;
+}
+.email {
+    margin-bottom: 60px;
+}
+.footer {
+    padding: 2rem;
+    background-color: var(--lightBlue);
+    text-align: right;
+    font-size: 20px;
+    color: var(--nombre);
 }
