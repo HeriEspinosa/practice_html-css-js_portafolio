@@ -104,11 +104,6 @@ img {
     width: 380px;
 }
 
-.img__perfil__bg:hover {
-    opacity: 0.8;
-    transform: scale(1.03);
-}
-
 .img__perfil__personal {
     position: absolute;
     height: 520px;
@@ -119,8 +114,8 @@ img {
 }
 
 .img__perfil__personal:hover {
-    opacity: 0.9    ;
-    transform: scale(1.03);
+    opacity: 0.8    ;
+    transform: scale(1.01);
 }
 
 .presentacion__perfil {
