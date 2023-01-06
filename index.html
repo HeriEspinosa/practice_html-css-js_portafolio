@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./src/styles.css">
 </head>
 <body>
@@ -298,20 +299,25 @@
                 </section>
             </section> 
                 
-            <section class="portafolio margen flex">
+            <section class="portafolio margen flex swiper">
                 <p class="title_p flex">Portafolio</p>
-                <section class="trabajo__portafolio">
-                    <a href="https://aprendiendo-flex-1.netlify.app" target="_blank"><img src="./src/img/Practice flex portafolio.png" alt="Flex"></a> 
-                    <p>Practice with Flex </p>
+                <section class="swiper-wrapper">
+                    <section class="trabajo__portafolio swiper-slide">
+                        <a href="https://aprendiendo-flex-1.netlify.app" target="_blank"><img src="./src/img/Practice flex portafolio.png" alt="Flex"></a> 
+                        <p>Practice with Flex </p>
+                    </section>
+                    <section class="trabajo__portafolio swiper-slide">
+                        <a href="https://copy-facebook.netlify.app" target="_blank"><img src="./src/img/facebook portafolio.png" alt="Facebook"></a>
+                        <p>Copy Facebook </p>
+                    </section>
+                    <section class="trabajo__portafolio swiper-slide">
+                        <a href="https://aprendiendo-flex-1.netlify.app" target="_blank"><img src="./src/img/Practice grid portafolio.png" alt="Grid"></a>
+                        <p> Practice with Grid </p>
+                    </section>
                 </section>
-                <section class="trabajo__portafolio">
-                    <a href="https://copy-facebook.netlify.app" target="_blank"><img src="./src/img/facebook portafolio.png" alt="Facebook"></a>
-                    <p>Copy Facebook </p>
-                </section>
-                <section class="trabajo__portafolio">
-                    <a href="https://aprendiendo-flex-1.netlify.app" target="_blank"><img src="./src/img/Practice grid portafolio.png" alt="Grid"></a>
-                    <p> Practice with Grid </p>
-                </section>
+            </section>
+            <section class="portafolio__flecas">
+                <img src="./src/img/Íconos/flechas2.png" alt="Flechas">
             </section>
 
             <section class="contacto margen flex" id="contacto">
@@ -332,5 +338,29 @@
         <footer>
         <p class="footer ff-sevillana">By: Heri Espinosa</p>
         </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 50,
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            });
+        </script>
+        <script src="./src/js/main.js"></script>
 </body>
 </html>
