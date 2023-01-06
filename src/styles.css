@@ -22,7 +22,9 @@
     font-family: 'Sevillana', cursive;
 }
 
-html {scroll-behavior: smooth;}
+html {
+    scroll-behavior: smooth;
+}
 
 img {
     width: 100%;
@@ -35,6 +37,12 @@ img {
     color: var(--lightBlue);
     flex-direction: column;
     gap: 1px;
+}
+
+.title_p:hover {
+    transform: rotate(3deg);
+    transition: 0.3s;
+    opacity: 0.9;
 }
 
 .margen {
@@ -102,33 +110,31 @@ img {
 }
 .img__perfil__bg {
     display: block;
-    margin: -30px;
-    width: 380px;
+    margin: -25px;
+    width: 390px;
 }
 .img__perfil__personal {
     position: absolute;
-    height: 520px;
-    width: 380px;
+    height: 545px;
+    width: 410px;
     margin: 0 auto;
-    left: -55px;
-    top: -53px
-}
-.img__perfil__personal:hover {
-    transform: scale(1.01);
+    left: -60px;
+    top: -48px;
 }
 
 
 .presentacion__perfil {
     flex-direction: column;
+    margin: -50px 0 15px;
 }
 .presentacion__perfil h4 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     text-shadow: -2px 1px 4px var(--lightGray);
     color: var(--nombre);
     margin-bottom: 8px;
 }
 .presentacion__perfil h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
 }
 
@@ -165,6 +171,9 @@ img {
 }
 
 
+.habilidades {
+    margin-top: 90px;
+}
 .habilidades > p {
     margin-bottom: 36px;
 }
@@ -189,6 +198,12 @@ img {
     font-size: 18px;
     text-shadow: 0px 1px 1px var(--nombre);
     padding: 5px;
+}
+.habilidades__all-child > p:hover {
+    transform: rotate(10deg);
+    transform: scale(1.08);
+    transition: 0.2s;
+    text-shadow: none;
 }
 .habilidades__all-child-hr {
     border-top: 7px solid var(--lightBlue);
@@ -216,8 +231,8 @@ img {
 
 .acerca_de_mi {
     flex-direction: column;
-    gap: 1.2rem;
-    padding: 1rem;
+    gap: 1rem;
+    padding: 2rem;
     font-size: 18px;
 }
 .acerca_de_mi article > p {
@@ -231,6 +246,7 @@ img {
     flex-direction: column;
     overflow: hidden;
     padding: 1rem;
+    margin-top: 60px;
 }
 .servicio__servicios {
     flex-direction: column;
@@ -239,6 +255,11 @@ img {
 .servicio__servicios > img {
     width: 150px;
     margin-top: 30px;
+}
+.servicio__servicios > img:hover {
+    transform: rotate(10deg);
+    transform: scale(1.08);
+    transition: 0.5s;
 }
 .servicio__servicios > h4 {
     font-size: 22px;
@@ -254,6 +275,7 @@ img {
 .portafolio {
     flex-direction: column;
     gap: 2rem;
+    margin-top: 80px;
 }
 .portafolio > section {
     height: 300px;
@@ -262,7 +284,7 @@ img {
     border-radius: 10px;
     overflow: hidden;
 }
-.portafolio section > img {
+.portafolio section a > img {
     width: 300px;
     height: 85%;
     padding-bottom: 12px;
@@ -278,6 +300,7 @@ img {
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
+    margin-top: 80px;
 }
 .contacto section {
     flex-direction: column;
@@ -308,3 +331,4 @@ img {
     font-size: 20px;
     color: var(--nombre);
 }
+
