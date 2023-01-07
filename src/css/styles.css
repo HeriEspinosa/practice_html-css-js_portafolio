@@ -613,7 +613,7 @@ body {
         margin: 15px;
         grid-column: 2/6;
         grid-row: 2/3;
-        margin-left: 80px;
+        margin-left: 50px;
     }
     .img__perfil__personal {
         left: -10px;
@@ -625,12 +625,12 @@ body {
         grid-column: 3/5;
         grid-row: 4/5;
         margin-top: -40px;
-        margin-left: 35px;
+        margin-left: 15px;
     }
     .redes__perfil  {
         grid-column: 3/5;
         grid-row: 5/6;
-        margin-left: 95px;
+        margin-left: 50px;
         margin-top: -20px;
     }
     .contacto {
