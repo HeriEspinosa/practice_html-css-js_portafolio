@@ -539,9 +539,11 @@ body {
     .portafolio {
         padding: 5rem;
     }
-    .portafolio > section {
-        height: 350px;
-        width: 800px;
+    .portafolio__flecas {
+        margin-top: -135px;
+        margin-bottom: -3rem;
+        background-color: transparent;
+        height: 1;
     }
 
 
@@ -611,7 +613,7 @@ body {
         margin: 15px;
         grid-column: 2/6;
         grid-row: 2/3;
-        margin-left: 100px;
+        margin-left: 80px;
     }
     .img__perfil__personal {
         left: -10px;
@@ -622,13 +624,14 @@ body {
     .contactame__btn {
         grid-column: 3/5;
         grid-row: 4/5;
-        margin-top: -15px;
-        margin-left: 45px;
+        margin-top: -40px;
+        margin-left: 35px;
     }
     .redes__perfil  {
         grid-column: 3/5;
         grid-row: 5/6;
-        margin-left: 120px;
+        margin-left: 95px;
+        margin-top: -20px;
     }
     .contacto {
         width: 85%;
