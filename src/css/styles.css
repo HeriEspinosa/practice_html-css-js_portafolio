@@ -16,6 +16,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
+    scroll-margin-top: 18px;
 }
 
 .ff-sevillana {
@@ -60,38 +61,107 @@ img {
     flex-direction: column;
     gap: 1rem;
     background-color: var(--whiteGray);
+    overflow: hidden;
 }
 
 
-.menu {
+.header  {
     width: 100vw;
     display: grid;
     grid-template-columns:  1fr 150px 100px 50px 1fr;
     grid-template-rows: 30px;
 
     margin-top: 10px;
-    position: sticky;
-    top: 20px;
+    position: fixed;
+    top: 10px;
+    z-index: 1000;
 }
-.menu div:nth-child(1) {
+.header div:nth-child(1) {
     grid-column: 4/5;
-    position: sticky;
-    top: 20px;
     cursor: pointer;
 }
-.menu div:nth-child(1):hover {
+.header div:nth-child(1):hover {
     opacity: 0.8    ;
     transform: scale(1.1);
 }
 
 
 #decor__menu {
-    margin: -30px -60px -60px -60px;
+    margin: 20px -60px -60px -60px;
     margin-left: -250px;
     padding: -50px;
 }
 .decor__menu:hover {
     transform: rotate(10deg);
+}
+
+.navbar {
+    height: 30px;
+    background-color:var(--lightBlue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    opacity: 0.9;
+
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0;
+
+    margin-top: -200%;
+    z-index: 10000;
+    transition: margin-top 0.25s;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 15px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    text-shadow: -4px 1px 5px var(--nombre);
+    color: var(--black);
+    cursor: pointer;
+}
+
+.menu li > a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: -4px 1px 5px var(--nombre);
+    color: var(--whiteGray);
+    cursor: pointer;
+}
+
+.menu li:hover {
+    transform: scale(1.5);
+    text-shadow: -4px 1px 5px var(--nombre);
+    transition: transform 0.5s;
+}
+
+.menu {
+    background-color: var(--lightBlue);
+    position: fixed;
+    flex-direction: column;
+    justify-content:center;
+    gap: 50px;
+
+    width: 40%;
+    min-height: calc(100vh - 30px);
+    top: 29px;
+    right:0;
+    list-style: none;
+    opacity: 0.9;
+
+    margin-right: -200%;
+    transition: margin-right 0.5s;
+}
+.menu_show {
+    margin-top:0;
+    margin-right: 0;
+}
+.menu_show-hidden {
+    display: none;
 }
 
 
@@ -100,11 +170,12 @@ img {
     gap: 1.5rem;
     margin-top: -2.5rem;
     overflow: hidden;
+    padding: 2rem;
 }
 .img__perfil {
     width: 80%;
     margin-bottom: 30px;
-    margin-top: 60px;
+    margin-top: 20px;
     display: flex;
     position: relative;
 }
@@ -119,7 +190,7 @@ img {
     width: 410px;
     margin: 0 auto;
     left: -60px;
-    top: -50px;
+    top: -48px;
 }
 
 
@@ -172,10 +243,13 @@ img {
 
 
 .habilidades {
-    margin-top: 90px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex-direction: column;
 }
+
 .habilidades > p {
-    margin-bottom: 36px;
+    margin-bottom: 2.5rem;
 }
 .habilidades__all {
     flex-wrap: wrap;
@@ -190,7 +264,6 @@ img {
     font-size: 2.5rem;
     font-weight: bold;
     border-radius: 5px;
-    overflow: hidden;
 }
 .habilidades__all-child > p {
     text-align: center;
@@ -232,8 +305,12 @@ img {
 .acerca_de_mi {
     flex-direction: column;
     gap: 1rem;
+    margin: 0 auto;
     padding: 2rem;
     font-size: 18px;
+}
+.acerca_de_mi > p {
+    margin-bottom: 0.5rem;
 }
 .acerca_de_mi article > p {
     margin-top: 10px;
@@ -244,9 +321,8 @@ img {
 
 .servicios {
     flex-direction: column;
-    overflow: hidden;
-    padding: 1rem;
-    margin-top: 60px;
+    padding: 2rem;
+    margin: 0 auto;
 }
 .servicio__servicios {
     flex-direction: column;
@@ -275,11 +351,16 @@ img {
 .portafolio {
     flex-direction: column;
     gap: 2rem;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-top: 3rem;
 }
 .portafolio > section {
     height: 300px;
     width: 300px;
-    background-color: var(--white);
+}
+.portafolio > p {
+    margin-bottom: 0.4rem;
 }
 .portafolio section a > img {
     width: 300px;
@@ -293,21 +374,32 @@ img {
     font-weight: 600;
 }
 .portafolio__flecas {
-    margin-top: -60px;
+    margin-top: -85px;
+    margin-bottom: -3rem;
     background-color: transparent;
     height: 1;
 }
 .portafolio__flecas > img {
     width: 130px;
 }
+.next {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-left: -10px;
+    color: var(--nombre);
+    margin-left: -20px;
+    margin-top: -15px;
+}
 
 
 .contacto {
     margin: 0 auto;
+    padding: 2rem;
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
-    margin-top: -10px;
+    margin-top:10px;
 }
 .contacto section {
     flex-direction: column;
@@ -337,5 +429,39 @@ img {
     text-align: right;
     font-size: 20px;
     color: var(--nombre);
+}
+
+
+@media (min-width: 700px) {
+    .navbar {
+        height: 50px;
+        padding: 0 1rem;
+
+        z-index: 10000;
+    }
+    .menu {
+        
+        position: relative;
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-between;
+        gap: 0.8rem;
+        list-style: none;
+
+        width: 75%;
+        min-height: 0;
+        top: 0;
+    }
+    .menu li > a {
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    .header {
+        display: none;
+    }
+    .decor__menu {
+        display: none;
+    }
 }
 

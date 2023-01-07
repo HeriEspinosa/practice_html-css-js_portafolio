@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="./src/css/styles.css">
 </head>
 <body>
         <main class="container flex">
 
-            <section class="menu">
+            <section class="header">
                 
                 <div class="barra__menu">
                     <svg width="50" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,6 +21,33 @@
                         </svg>
                 </div>
             </section>
+
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="#home">Ing. Espinosa</a>
+                </div>
+
+                <ul class="flex menu">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#habilidades">Habilidades</a>
+                    </li>
+                    <li>
+                        <a href="#acerca_de_mi">Acerca de Mi</a>
+                    </li>
+                    <li>
+                        <a href="#servicios">servicios</a>
+                    </li>
+                    <li>
+                        <a href="#portafolio">Portafolio</a>
+                    </li>
+                    <li>
+                        <a href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
             
             <svg id="decor__menu" class="decor__menu" width="100" height="100" viewBox="0 0 176 158" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.5">
@@ -147,18 +174,9 @@
                     </g>
                 </svg>
 
-            <!-- <nav class="navbar">
-                <a href="#home" class="home"></a>
-                <a href="#servicios" class="servicios"></a>
-                <a href="#acerca_de_mi" class="acerca"></a>
-                <a href="#habilidades" class="mis_habilidades"></a>
-                <a href="#portafolio" class="mi_portafolio"></a>
-                <a href="#contacto" class="contacto"></a>
-            </nav> -->
-
             <section class="perfil margen flex">
 
-                <section class="img__perfil">
+                <section id="home" class="img__perfil">
                     
                     <svg class="img__perfil__bg" width="400" height="480" viewBox="250 65 650 605 " fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 100H396.5C570.746 100 712 241.254 712 415.5V731H0V100Z" fill="url(#paint0_linear_59_1212)"/>
@@ -212,7 +230,7 @@
                 
             </section>
 
-            <section class="habilidades margen">
+            <section id="habilidades" class="habilidades margen flex">
                 <p class="title_p flex">Hablilidades</p>
                 <section class="habilidades__all flex">
                     
@@ -264,8 +282,10 @@
                 </section>
             </section> 
         
-            <section class="acerca_de_mi margen flex">
+            <section id="acerca_de_mi" class="acerca_de_mi margen flex">
+                
                 <p class="title_p flex">Acerca de mi</p>
+                <div class="acerca">
                 <article class="art__acerca_de_mi">
                     <p>Soy Ingeniero en Informatica, egresado de la universidad UTESA.</p>
                     <br>
@@ -273,9 +293,10 @@
                     <br>
                     <p>Docente en Programacion de bases de datos.</p>
                 </article> 
+            </div>
             </section>  
 
-            <section class="servicios margen flex">
+            <section id="servicios" class="servicios margen flex">
                 <p class="title_p flex">Servicios</p>
                 <section class="servicio__servicios flex">
                     <img src="./src/img/Íconos/databases.png" alt="base de datos">
@@ -299,7 +320,7 @@
                 </section>
             </section> 
                 
-            <section class="portafolio margen flex swiper">
+            <section id="portafolio" class="portafolio margen flex swiper">
                 <p class="title_p flex">Portafolio</p>
                 <section class="swiper-wrapper">
                     <section class="trabajo__portafolio swiper-slide">
@@ -316,11 +337,12 @@
                     </section>
                 </section>
             </section>
-            <section class="portafolio__flecas">
+            <section class="portafolio__flecas flex">
                 <img src="./src/img/Íconos/flechas2.png" alt="Flechas">
+            <p class="next"><i>NEXT</i></p>
             </section>
 
-            <section class="contacto margen flex" id="contacto">
+            <section id="contacto" class="contacto margen flex">
                 <p class="title_p flex">Contacto</p>
                 <section class="phone__contacto flex">
                     <img src="./src/img/Íconos/phone.svg" alt="Phone">
@@ -348,12 +370,6 @@
             // If we need pagination
             pagination: {
                 el: '.swiper-pagination',
-                clickable: true,
-            },
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
             },
             // And if we need scrollbar
             scrollbar: {
