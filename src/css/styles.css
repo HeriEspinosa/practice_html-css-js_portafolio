@@ -593,9 +593,12 @@ img {
         grid-row: 2/3;
         margin-left: 100px;
     }
-    .img__perfil__personal {
-        left: 20px;
+    .img__perfil {
+        left: -90px;
+        margin-top: 33px;
     }
+
+
     .contactame__btn {
         grid-column: 3/5;
         grid-row: 4/5;
