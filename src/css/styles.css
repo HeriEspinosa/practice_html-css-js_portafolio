@@ -537,7 +537,7 @@ body {
 
 
     .portafolio {
-        padding: 5rem;
+        padding: 4rem;
     }
     .portafolio__flecas {
         margin-top: -135px;
@@ -590,6 +590,7 @@ body {
         transition: transform 0.5s;
     }
 
+
     .perfil{
         display: grid;
         grid-template-columns: 250px 200px 100px 100px 230px;
@@ -619,8 +620,6 @@ body {
         left: -10px;
         top: -40px;
     }
-
-
     .contactame__btn {
         grid-column: 3/5;
         grid-row: 4/5;
@@ -633,6 +632,7 @@ body {
         margin-left: 50px;
         margin-top: -20px;
     }
+    
     .contacto {
         width: 85%;
         border-radius: 150px;
