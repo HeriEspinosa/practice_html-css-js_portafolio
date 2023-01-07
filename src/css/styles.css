@@ -513,6 +513,15 @@ img {
         color: var(--lightGray);
     }
 
+
+    .acerca_de_mi {
+        padding: 5rem;
+    }
+    .acerca_de_mi article > p {
+        font-size: 25px;
+    }
+
+
     .swiper-slide a img {
         margin: 0 auto;
     }
