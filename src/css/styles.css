@@ -128,7 +128,7 @@ img {
     text-decoration: none;
     font-size: 20px;
     font-weight: 600;
-    text-shadow: -4px 1px 5px var(--nombre);
+    text-shadow: -4px 1px 6px var(--nombre);
     color: var(--whiteGray);
     cursor: pointer;
 }
@@ -192,8 +192,6 @@ img {
     left: -60px;
     top: -48px;
 }
-
-
 .presentacion__perfil {
     flex-direction: column;
     margin: -50px 0 15px;
@@ -208,14 +206,13 @@ img {
     font-size: 1.8rem;
     font-weight: 600;
 }
-
-
 .redes__perfil div {
     
     border: 3px solid var(--lightBlue);
     border-radius: 100%;
     padding: 5px;
     margin: 10px;
+    background: linear-gradient(0deg, rgba(2,0,36,1) 46%, rgba(52,176,190,1) 100%);
 }
 .redes__perfil img {
     height: 50px;
@@ -404,6 +401,7 @@ img {
 .contacto section {
     flex-direction: column;
     text-align: center;
+    justify-content: center;
 }
 .contacto section > img {
     width: 200px;
@@ -425,19 +423,25 @@ img {
 
 .footer {
     padding: 2rem;
-    background-color: var(--lightBlue);
+    background: rgba(2,0,36,1);
     text-align: right;
     font-size: 20px;
-    color: var(--nombre);
+    color: var(--whiteGray);
 }
+
 
 
 @media (min-width: 700px) {
     .navbar {
         height: 50px;
         padding: 0 1rem;
-
         z-index: 10000;
+        margin-top:0;
+        margin-right: 0;
+        background: linear-gradient(90deg, rgba(52,176,190,1) 0%, rgba(2,0,36,1) 30%);
+    }
+    .logo a {
+        font-size: 20px;
     }
     .menu {
         
@@ -445,23 +449,157 @@ img {
         flex-direction: row;
         gap: 0;
         justify-content: space-between;
-        gap: 0.8rem;
+        gap: 0.7rem;
         list-style: none;
 
         width: 75%;
         min-height: 0;
         top: 0;
+        margin-top:0;
+        margin-right: 0;
+        background: transparent;
     }
     .menu li > a {
         text-decoration: none;
         font-size: 15px;
+        text-shadow: -2px 1px 2px var(--nombre);
     }
-
+    .menu li:hover {
+        transform: scale(1.09);
+        transition: transform 0.5s;
+    }
     .header {
         display: none;
     }
     .decor__menu {
         display: none;
     }
+
+
+    .perfil {
+        margin-top: 5px;
+        width: 100vw;
+        background: linear-gradient(90deg, rgba(52,176,190,1) 0%, rgba(2,0,36,1) 30%);
+    }
+    .img__perfil {
+        width: 90%;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        display: flex;
+        position: relative;
+    }
+    .img__perfil__bg {
+        display: block;
+        margin: 20px;
+        width: 780px;
+        margin-left: 150px ;
+        padding-top: 25px;
+    }
+    .img__perfil__personal {
+        position: absolute;
+        height: 715px;
+        width: 520px;
+        margin: 0 auto;
+        left: 120px;
+        top: -81px;
+    }
+    .presentacion__perfil h4 {
+        font-size: 3rem;
+        text-shadow: -1px 2px 4px var(--black);
+        color: var(--lightBlue);
+    }
+    .presentacion__perfil h2 {
+        text-shadow: -2px 5px 2px rgba(2,0,36,1);
+        color: var(--lightGray);
+    }
+
+    .swiper-slide a img {
+        margin: 0 auto;
+    }
+    .portafolio > section {
+        height: 350px;
+        width: 800px;
+    }
+
+
+    .contacto {
+        background: linear-gradient(0deg, rgba(2,0,36,1) 46%, rgba(52,176,190,1) 100%);
+        color: var(--lightBlue);
+        width: 95%;
+        border-radius: 100px;
+        
+        margin-top:100px;
+    }
+    .contacto section {
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .contacto__hijos > section {
+        flex-direction: column;
+        padding: 0 3rem 2rem;
+        margin: 0 auto;
+    }
+    .email {
+        margin-bottom: 20px;
+    }
+    
 }
 
+@media (min-width: 1000px) {
+    
+    .menu li {
+        padding: 1rem;
+        font-size: 1.4rem;
+    }
+    .menu li a{
+        font-size: 1rem;
+    }
+    .menu li:hover {
+        transform: scale(1.5);
+        transition: transform 0.5s;
+    }
+
+    .perfil{
+        display: grid;
+        grid-template-columns: 250px 200px 100px 100px 230px 1fr;
+        grid-template-rows: 1fr 50px 50px 50px 60px;
+        margin-bottom: 50px;
+    }
+    .img__perfil__bg {
+        display: none;
+    }
+    .hr_redes {
+        display: none;
+    }
+    .img__perfil {
+        grid-column: 1/2;
+        grid-row: auto;
+        margin: 20px 0 0 -100px;
+        padding: 80px;
+    }
+    .presentacion__perfil {
+        margin: 15px;
+        grid-column: 2/6;
+        grid-row: 2/3;
+        margin-left: 100px;
+    }
+    .img__perfil__personal {
+        left: 20px;
+    }
+    .contactame__btn {
+        grid-column: 3/5;
+        grid-row: 4/5;
+        margin-top: -15px;
+        margin-left: 45px;
+    }
+    .redes__perfil  {
+        grid-column: 3/5;
+        grid-row: 5/6;
+        margin-left: 120px;
+    }
+    .contacto {
+        width: 85%;
+        border-radius: 150px;
+    }
+}

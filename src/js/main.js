@@ -20,7 +20,6 @@ menuShow.addEventListener("click", function(){
 });
 
 
-
 links.forEach((link) => {
     link.addEventListener("click", function(){
         barraShow.classList.toggle("menu_show");
